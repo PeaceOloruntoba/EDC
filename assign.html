@@ -37,22 +37,33 @@
             font-size: 22px;
             padding: 22px;
         }
-        h1{
+        p, h1{
             font-weight: normal;
             font-size: 16px;
+        }
+        h1{
             text-align: center;
+        }
+        p{
+            margin-bottom: -18px;
         }
         .bbb{
             font-weight: bold;
             font-size: 20px;
         }
+        .aaa{
+            align-items: start;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Enterprenuership Assignment</h1>
-    <h1>Name: <span class="bbb">Peace Oloruntoba</span></h1>
-    <h1>Matric No: <span class="bbb">Peace Oloruntoba</span></h1>
-    <h1>Dept: <span class="bbb">Peace Oloruntoba</span></h1>
+    <div class="aaa">
+        <p>Name: <span class="bbb">Peace Oloruntoba</span></p>
+        <p>Matric No: <span class="bbb">AUL/SCI/21/00726</span></p>
+        <p>Dept: <span class="bbb">Mathematical Science</span></p>
+    </div>
     <table>
         <tr>
             <th>Book</th>
@@ -93,6 +104,58 @@
             <td><a href="#" class="verse-link" data-verse="exodus+9:9">9</a></td>
             <td><a href="#" class="verse-link" data-verse="exodus+10:10">10</a></td>
         </tr>
+        <tr>
+            <th>Leviticus</th>
+            <td><a href="#" class="verse-link" data-verse="leviticus+1:1">1</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+2:2">2</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+3:3">3</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+4:4">4</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+5:5">5</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+6:6">6</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+7:7">7</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+8:8">8</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+9:9">9</a></td>
+            <td><a href="#" class="verse-link" data-verse="leviticus+10:10">10</a></td>
+        </tr>
+        <tr>
+            <th>Numbers</th>
+            <td><a href="#" class="verse-link" data-verse="numbers+1:1">1</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+2:2">2</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+3:3">3</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+4:4">4</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+5:5">5</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+6:6">6</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+7:7">7</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+8:8">8</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+9:9">9</a></td>
+            <td><a href="#" class="verse-link" data-verse="numbers+10:10">10</a></td>
+        </tr>
+        <tr>
+            <th>Matthew</th>
+            <td><a href="#" class="verse-link" data-verse="matthew+1:1">1</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+2:2">2</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+3:3">3</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+4:4">4</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+5:5">5</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+6:6">6</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+7:7">7</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+8:8">8</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+9:9">9</a></td>
+            <td><a href="#" class="verse-link" data-verse="matthew+10:10">10</a></td>
+        </tr>
+        <tr>
+            <th>Mark</th>
+            <td><a href="#" class="verse-link" data-verse="mark+1:1">1</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+2:2">2</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+3:3">3</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+4:4">4</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+5:5">5</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+6:6">6</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+7:7">7</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+8:8">8</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+9:9">9</a></td>
+            <td><a href="#" class="verse-link" data-verse="mark+10:10">10</a></td>
+        </tr>
     </table>
     <div id="bible-verse-info"></div>
 
@@ -112,6 +175,7 @@
                         const text = data.text;
                         const verseInfo = `${bookName} ${chapter}:${verse}<br>${text}`;
                         verseInfoElement.innerHTML = verseInfo;
+
                     })
                     .catch(error => {
                         console.error("Error fetching data:", error);
